@@ -5,7 +5,7 @@ with open('tweets_extraction.json', 'r', encoding='utf-8') as file:
     tweets_data = json.load(file)
 
 # Extrae información de cada tweet
-for tweet in tweets_data:
+for tweet in tweets_data[:10]:
     tweet_id = tweet['id']
     tweet_text = tweet['texto']
     tweet_user = tweet['usuario']
@@ -26,4 +26,8 @@ for tweet in tweets_data:
 
 # Verifica estructura de datos
 print(f"Número de tweets: {len(tweets_data)}")
-print(f"Estructura de un tweet: {tweets_data[0]}")
+
+#Imprime la estructura de cada objeto del json de tweets
+print("Estructura de un tweet: ")
+for key in tweets_data[0].keys():
+    print (key)
