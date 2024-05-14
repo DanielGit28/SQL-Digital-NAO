@@ -1,0 +1,2 @@
+#Ignoring tweets extraction file because its size it's too big for a free repo
+/tweets_extraction.json
